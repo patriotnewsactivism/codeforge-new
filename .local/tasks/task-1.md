@@ -1,0 +1,170 @@
+---
+title: Migrate from vercel to Replit
+---
+# Port the imported Vercel / v0 app
+
+## Goal
+
+The user just imported a project from Vercel or v0. Port it from the imported state into the Replit `pnpm_workspace` stack so it runs cleanly in this environment. **It must look and work like the original.**
+
+The imported project is almost always Next.js. You must convert it to a Vite + React app (`react-vite` artifact). Next.js is not supported as an artifact type.
+
+This app is the user's real product. Treat it like porting someone's live app — every lost feature, broken style, or missing interaction is a regression.
+
+## In scope
+
+- Convert the Next.js app to Vite + React and restructure into the Replit `pnpm_workspace` layout (frontend artifact + optional `api-server` for API routes).
+- Replace Next.js-specific patterns (file-based routing, API routes, `next/image`, `next/link`, SSR) with Vite + React equivalents.
+- Make the app actually run via the Replit workflow.
+
+## Out of scope
+
+- Building new features or refactoring beyond what's needed to run.
+- Strict typecheck — use `// @ts-ignore` to keep moving. Visual + functional parity matters more than zero TS errors.
+- Fixing bugs that existed before the import.
+
+## Vercel-specific notes
+
+Vercel/v0 projects are almost always Next.js. The key job is converting to Vite + React:
+
+- **Next.js routing → React Router / wouter** — `app/page.tsx` and `pages/*.tsx` become route components. Use wouter (already in the scaffold) or react-router.
+- **`next/image` → `<img>`** — replace `Image` from `next/image` with standard `<img>` tags. Copy `width`/`height`/`alt` props.
+- **`next/link` → `<a>` or wouter `<Link>`** — replace Next.js `Link` with standard links or wouter `Link`.
+- **API routes → Express** — `app/api/` or `pages/api/` routes become Express routes in `artifacts/api-server/`. Simple endpoints can be inlined; heavy backends (DB, auth) go through `lib/db/`.
+- **SSR / `getServerSideProps` / `getStaticProps`** — convert to client-side data fetching (`useEffect` + `fetch` or react-query). The Vite app is fully client-rendered.
+- **`next.config.mjs`** — not used in Vite. Migrate relevant settings (env vars, redirects) to `vite.config.ts` or Express middleware.
+- **Monorepo structure** — some Vercel projects use `apps/web`, `packages/frontend`. Locate the Next.js app first.
+- **Binary asset spot-check** — v0 exports can ship images/fonts as base64 text. Run `file public/**/*.{png,jpg,webp,woff,woff2,ttf}` — any binary reported as text needs `base64 -d`.
+- **Env vars** — anything via `process.env.*` or `NEXT_PUBLIC_*` needs a Replit secret. `NEXT_PUBLIC_` vars become `VITE_` vars in the Vite app.
+
+## Pre-existing scaffold (do NOT remove)
+
+The pnpm_workspace scaffold is already applied. These existed before this task started:
+
+- `artifacts/api-server/` — backend artifact (kind=api).
+- `artifacts/mockup-sandbox/` — design/mockup artifact.
+- `lib/api-spec/`, `lib/api-client-react/`, `lib/db/` — shared packages.
+
+The existing app's frontend goes into a NEW web artifact created via `createArtifact`. Do NOT put frontend code into `artifacts/api-server/`.
+
+## How to communicate
+
+Short, non-technical updates: "Looking at your project..." → "Setting things up..." → "Converting to Vite..." → "Wiring up routes..." → "Checking everything works..."
+
+## Steps
+
+### 0. Read the pnpm_workspace skill
+
+Read `.local/skills/pnpm-workspace/SKILL.md` first. It contains the canonical patterns for project references, artifact routing, package management, and common pitfalls.
+
+### 1. Detect + install
+
+```sh
+bash .local/secondary_skills/migrate-to-multi-artifact/references/fullstack_detect.sh
+pnpm install
+```
+
+Read the detect output. For Vercel, expect Next.js. Note:
+
+- `CLIENT_DIR` — root or a subdirectory if it's a monorepo.
+- `CONFLICTS` — fix these before continuing.
+- Check if it's a monorepo (multiple `package.json` files, `apps/` directory).
+
+### 2. Read what you need
+
+Read just enough from `.migration-backup/` to understand the app:
+
+- `package.json` (deps, scripts).
+- `next.config.mjs` or `next.config.js` (redirects, env vars, image domains).
+- `app/` or `pages/` directory listing to understand the routing structure.
+- Any `app/api/` or `pages/api/` routes — these need extraction to Express.
+- `.env` or `.env.local` filenames (not contents) to know which secrets are needed.
+
+Do NOT read every component — focus on routing structure and API surface.
+
+### 3. Build backend (only if the app has API routes)
+
+If the app has `app/api/` or `pages/api/` routes:
+
+```sh
+createArtifact({ artifactType: "api", slug: "api-server", ... })  // skip if api-server already exists
+```
+
+Convert Next.js API routes to Express routes in `artifacts/api-server/`. Set up `lib/db/` (Drizzle + Postgres) if the app uses a database.
+
+Run codegen + DB push in parallel once the spec exists:
+
+- `pnpm --filter @workspace/api-spec run codegen`
+- `pnpm --filter @workspace/db run push`
+
+If it's purely frontend with no API routes, skip this step.
+
+### 4. Copy frontend
+
+```sh
+createArtifact({ artifactType: "react-vite", slug: "<app-name>", previewPath: "/", title: "<Title>" })
+```
+
+Then run the copy script — do NOT skip this or manually rewrite files instead:
+
+```sh
+bash .local/secondary_skills/migrate-to-multi-artifact/references/fullstack_copy_frontend.sh <app-name>
+```
+
+The script copies source files from `.migration-backup/` into the new artifact, patches imports, installs dependencies, and handles both flat and monorepo layouts. Manually rewriting files loses styles, fonts, and subtle markup that the script preserves.
+
+Read the script output and act on it:
+
+- `AGENT TODO` — required edits. Do these.
+- `SKIPPED` — files intentionally not copied (conflicts). Check if they matter.
+- `PATCHED` — automatic fixes applied. No action needed.
+- `INSTALLED` — dependencies added. No action needed.
+
+### 5. Convert Next.js → Vite + React
+
+This is the core transformation. Work through these in order:
+
+- **Remove `next` dependency**, add `react-router-dom` or use wouter (already in scaffold).
+- **Convert routing** — `app/page.tsx` → route components. Create a `src/App.tsx` with a router that maps the old Next.js paths.
+- **Replace `next/image`** with `<img>` tags.
+- **Replace `next/link`** with `<a>` or wouter `<Link>`.
+- **Convert data fetching** — `getServerSideProps` / `getStaticProps` / server components → `useEffect` + `fetch` or react-query hooks calling the api-server.
+- **Rename `NEXT_PUBLIC_*` env vars** to `VITE_*` and update references from `process.env.NEXT_PUBLIC_*` to `import.meta.env.VITE_*`.
+- **Env vars** — use the environment-secrets skill to request any missing values.
+
+Verify these are preserved:
+
+- **Fonts** — Google Fonts `<link>` tags + CSS `--font-sans` variables.
+- **Colors / theme** — Tailwind CSS variables in `:root` and `.dark`.
+- **Routing** — all original paths should be reachable in the Vite app.
+
+### 6. Verify
+
+Restart the workflow, then use the testing agent (see the testing skill) to exercise the main flows — navigation, key interactions, any auth or data features. The testing agent will screenshot each step and report failures.
+
+**Replit apps run via workflows, not root-level `pnpm dev`.** Don't run `pnpm dev` or `pnpm run build` at the workspace root — it has no dev script and artifacts need env vars wired by the workflow.
+
+**What to check**: Does it look the same? Does it work? If the testing agent reports failures, fix and re-run. If it passes, you're done.
+
+### 8. Complete
+
+Call `mark_task_complete` with `skip_validation_reason` set. Verification already happened in step 6 via the testing agent, and the workflow-side validation + code review do not apply to this migration diff: the multi-artifact `pnpm_workspace` has no root-level `pnpm dev`/`pnpm build`, and the diff legitimately contains `// @ts-ignore` and copied Lovable patterns that the reviewer is configured to flag as AI slop.
+
+Pass exactly:
+
+```
+skip_validation_reason: "Multi-artifact migration verified via the testing agent in step 6; root-level validation and code review do not apply to this stack-migration diff."
+```
+
+The user will verify visual + functional parity before doing anything else.
+
+## Note to the code reviewer
+
+When reviewing the diff for this task:
+
+- HONOR the `Out of scope` section above. Don't reject for items the plan explicitly marks out of scope (`any` types, typecheck errors).
+- Do NOT reject for pre-existing issues — type errors / `any` types / legacy patterns in code copied from the imported tree are not regressions.
+- Do NOT flag the pre-existing scaffold packages (`artifacts/api-server/`, `lib/*`) as agent additions.
+- Do NOT reject for `pnpm dev` failing at workspace root — Replit apps run via workflows.
+- Do NOT flag scaffold files (`src/components/ui/*.tsx` shadcn, default `favicon.svg`).
+- Apply only the criteria from this task's `## Goal` + `## In scope`. Reject only for real regressions (broken runtime, missing files, lost features).

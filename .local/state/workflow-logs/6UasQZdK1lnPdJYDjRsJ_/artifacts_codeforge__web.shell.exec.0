@@ -1,0 +1,35 @@
+
+> @workspace/codeforge@0.0.0 dev /home/runner/workspace/artifacts/codeforge
+> vite --config vite.config.ts --host 0.0.0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J
+  [32m[1mVITE[22m v7.3.3[39m  [2mready in [0m[1m2058[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m24702[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.31.80.98:[1m24702[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[41m[30m ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL [39m[49m [31m@workspace/codeforge@0.0.0 dev: `vite --config vite.config.ts --host 0.0.0.0`[39m
+[31mCommand failed with signal "SIGTERM"[39m

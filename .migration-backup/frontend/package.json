@@ -1,0 +1,14 @@
+{
+  "name": "frontend-app",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  }
+}

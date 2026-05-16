@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/codeforge-mobile/"
+title = "CodeForge Mobile"
+version = "1.0.0"
+id = "artifacts/codeforge-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/codeforge-mobile/" ]
+localPort = 24808
+
+[services.development]
+run = "pnpm --filter @workspace/codeforge-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/codeforge-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/codeforge-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "24808"
+BASE_PATH = "/codeforge-mobile/"

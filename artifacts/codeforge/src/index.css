@@ -1,0 +1,264 @@
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar-background: var(--sidebar-background);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  /* CodeForge dark theme — always dark */
+  --background: oklch(0.13 0.02 260);
+  --foreground: oklch(0.95 0.01 260);
+
+  --card: oklch(0.16 0.02 260);
+  --card-foreground: oklch(0.95 0.01 260);
+
+  --popover: oklch(0.16 0.02 260);
+  --popover-foreground: oklch(0.95 0.01 260);
+
+  --primary: oklch(0.75 0.18 190); /* Cyan accent */
+  --primary-foreground: oklch(0.13 0.02 260);
+
+  --secondary: oklch(0.22 0.02 260);
+  --secondary-foreground: oklch(0.90 0.01 260);
+
+  --muted: oklch(0.20 0.02 260);
+  --muted-foreground: oklch(0.60 0.02 260);
+
+  --accent: oklch(0.22 0.02 260);
+  --accent-foreground: oklch(0.90 0.01 260);
+
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.95 0.01 260);
+
+  --success: oklch(0.65 0.19 155);
+  --warning: oklch(0.75 0.16 75);
+  --info: oklch(0.70 0.15 220);
+
+  --border: oklch(0.25 0.02 260);
+  --input: oklch(0.22 0.02 260);
+  --ring: oklch(0.75 0.18 190);
+
+  --chart-1: oklch(0.70 0.18 190);
+  --chart-2: oklch(0.70 0.16 50);
+  --chart-3: oklch(0.65 0.19 155);
+  --chart-4: oklch(0.65 0.2 350);
+  --chart-5: oklch(0.75 0.16 105);
+
+  --sidebar-background: oklch(0.11 0.02 260);
+  --sidebar-foreground: oklch(0.90 0.01 260);
+  --sidebar-primary: oklch(0.75 0.18 190);
+  --sidebar-primary-foreground: oklch(0.13 0.02 260);
+  --sidebar-accent: oklch(0.18 0.02 260);
+  --sidebar-accent-foreground: oklch(0.90 0.01 260);
+  --sidebar-border: oklch(0.22 0.02 260);
+  --sidebar-ring: oklch(0.75 0.18 190);
+  --sidebar-width: 16rem;
+
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, sans-serif;
+  }
+  .flex {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+/* Container utility */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .container { max-width: 640px; padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 768px) {
+  .container { max-width: 768px; }
+}
+@media (min-width: 1024px) {
+  .container { max-width: 1024px; padding-left: 2rem; padding-right: 2rem; }
+}
+@media (min-width: 1280px) {
+  .container { max-width: 1280px; }
+}
+
+/* Monaco editor overrides */
+.monaco-editor,
+.monaco-editor .overflow-guard {
+  border-radius: 0 !important;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.13 0.02 260);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.30 0.02 260);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.40 0.02 260);
+}
+
+/* Glow effects */
+.glow-cyan {
+  text-shadow: 0 0 20px oklch(0.75 0.18 190 / 0.5);
+}
+
+/* Sandbox iframe */
+.sandbox-frame {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+/* Panel resize handles */
+[data-panel-group-direction="horizontal"] > [data-resize-handle] {
+  width: 2px !important;
+  background: oklch(0.25 0.02 260);
+  transition: background 0.15s;
+}
+[data-panel-group-direction="horizontal"] > [data-resize-handle]:hover,
+[data-panel-group-direction="horizontal"] > [data-resize-handle][data-resize-handle-active] {
+  background: oklch(0.75 0.18 190);
+}
+[data-panel-group-direction="vertical"] > [data-resize-handle] {
+  height: 2px !important;
+  background: oklch(0.25 0.02 260);
+  transition: background 0.15s;
+}
+[data-panel-group-direction="vertical"] > [data-resize-handle]:hover,
+[data-panel-group-direction="vertical"] > [data-resize-handle][data-resize-handle-active] {
+  background: oklch(0.75 0.18 190);
+}
+
+/* ─── MOBILE UTILITIES ──────────────────────────────────────────────────────── */
+
+/* Hide scrollbars but keep scroll functionality */
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Use dynamic viewport height on mobile (fixes iOS Safari 100vh bug) */
+@supports (height: 100dvh) {
+  .h-\[100dvh\] {
+    height: 100dvh;
+  }
+}
+
+/* Prevent double-tap zoom on touch buttons */
+button, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Ensure code editors don't cause horizontal scroll on mobile */
+.monaco-editor, .monaco-editor-background {
+  min-width: 0 !important;
+}
+
+/* Bottom safe area padding for iOS notch phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ─── CRITICAL MOBILE OVERRIDES ──────────────────────────────────────────────
+   These prevent the most common mobile layout issues:
+   horizontal scroll, blown-out widths, bad font sizes
+─────────────────────────────────────────────────────────────────────────── */
+
+/* 1. Hard-stop horizontal scroll at the root level */
+html, body, #root {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* 2. overflow-wrap on all text elements prevents long strings blowing layout */
+*, *::before, *::after {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 3. Inputs/textareas: prevent iOS zoom on focus (requires font-size >= 16px or explicit override) */
+@media (max-width: 768px) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+/* 4. Monaco editor container — must never exceed viewport width */
+.monaco-editor,
+.monaco-editor .overflow-guard,
+.monaco-editor .monaco-scrollable-element {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* 5. Prevent ResizablePanelGroup from creating horizontal scroll */
+[data-panel-group] {
+  overflow: hidden !important;
+}
+
+/* 6. Base tap highlight color — remove grey flash on mobile tap */
+* {
+  -webkit-tap-highlight-color: transparent;
+}

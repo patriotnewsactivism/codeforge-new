@@ -1,0 +1,23 @@
+[
+  {
+    "id": "FrontendCadet",
+    "domain": "frontend",
+    "promptTemplate": "You are Frontend Cadet. Task: {task.description}. Provide code changes, plus brief docs and unit tests.",
+    "tools": ["lint", "typecheck"],
+    "successCriteria": "build+tests"
+  },
+  {
+    "id": "BackendCadet",
+    "domain": "backend",
+    "promptTemplate": "You are Backend Cadet. Task: {task.description}. Provide API/backend code with tests and docs.",
+    "tools": ["lint", "typecheck"],
+    "successCriteria": "build+tests"
+  },
+  {
+    "id": "TestsCadet",
+    "domain": "tests",
+    "promptTemplate": "You are Tests Cadet. Task: {task.description}. Write tests and ensure coverage.",
+    "tools": ["test-runner"],
+    "successCriteria": "tests pass"
+  }
+]

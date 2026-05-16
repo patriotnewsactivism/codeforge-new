@@ -1,0 +1,35 @@
+Task #5: Push notifications and deep linking for CodeForge Mobile
+
+## Convex backend (additive — finishSession extended, nothing removed)
+- schema.ts: Added `userPushTokens` table (userId, token, platform, createdAt)
+  with a `by_user` index
+- users.ts: Added `registerPushToken` (public mutation), `getPushTokens`
+  (internalQuery), `notifyBuildComplete` (internalAction — server-only, sends
+  push to all user devices via Expo push API at exp.host)
+- buildLoop.ts: Added `internal` import; `finishSession` now schedules
+  `internal.users.notifyBuildComplete` via `ctx.scheduler.runAfter` when
+  status transitions to "completed" — fires even when the app is closed
+
+## Mobile app (artifacts/codeforge-mobile/)
+- expo-notifications@~0.32.17 installed
+- app.json: Added expo-notifications plugin with branded icon/color
+- lib/api.ts: Added users.registerPushToken ref
+- app/_layout.tsx:
+  - Notification foreground handler configured
+  - NotificationSetup (inside ConvexAuthProvider) requests permissions on first
+    auth and registers Expo push token via api.users.registerPushToken
+  - Explicit deep-link handling: Linking.getInitialURL() for cold-start,
+    Linking.addEventListener for warm-start — routes
+    codeforge-mobile://project/<id> to /project/[id] with typed route objects
+    (no `as any` casts)
+  - Notification tap listener navigates via typed { pathname, params } routing
+
+## Security
+- notifyBuildComplete is internalAction — not callable from clients
+- Target userId always derived server-side from the build session record
+
+## Design decisions
+- Local in-app notification from project screen was removed: getActiveSession
+  only returns running sessions (null on completion), making transition
+  unobservable from the client. Server-side push via finishSession is the
+  sole notification mechanism, which is correct and reliable.

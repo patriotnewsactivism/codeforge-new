@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "CodeForge"
+version = "1.0.0"
+id = "artifacts/codeforge"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24702
+
+[services.development]
+run = "pnpm --filter @workspace/codeforge run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/codeforge", "run", "build" ]
+publicDir = "artifacts/codeforge/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24702"
+BASE_PATH = "/"

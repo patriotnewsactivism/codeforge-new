@@ -1,0 +1,1893 @@
+
+> @workspace/codeforge@0.0.0 dev /home/runner/workspace/artifacts/codeforge
+> vite --config vite.config.ts --host 0.0.0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J
+  [32m[1mVITE[22m v7.3.3[39m  [2mready in [0m[1m521[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m24702[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.31.116.194:[1m24702[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m9:41:00 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/DashboardPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/DashboardPage.tsx[39m:4:20
+[33m  5  |  import { useNavigate } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import { Button } from "@/components/ui/button";
+  9  |  import {[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/SettingsPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/SettingsPage.tsx[39m:21:20
+[33m  22 |  import { Switch } from "@/components/ui/switch";
+  23 |  import { useTheme } from "@/contexts/ThemeContext";
+  24 |  import { api } from "../convex/_generated/api";
+     |                       ^
+  25 |  export function SettingsPage() {
+  26 |    _s();[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/IDEPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/IDEPage.tsx[39m:4:20
+[33m  5  |  import { useParams } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import {
+  9  |    ResizableHandle,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ChatPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ChatPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useMutation, useQuery, useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Send,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useAction } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState } from "react";
+  7  |  import { Badge } from "@/components/ui/badge";[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CollaborationBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CollaborationBar.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { Users, Copy, Check, Link2, ChevronLeft } from "lucide-react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/BuildProgress.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/BuildProgress.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Loader2,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DeployPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DeployPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState, useCallback } from "react";
+  7  |  import { Button } from "@/components/ui/button";[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/SuggestionsPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/SuggestionsPanel.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Lightbulb,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/MemoryTab.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/MemoryTab.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Brain,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DiffViewer.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DiffViewer.tsx[39m:8:20
+[33m  4  |  import { useState, useMemo } from "react";
+  5  |  import { useQuery } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import { cn } from "@/lib/utils";
+  8  |  import { GitCompareArrows, ArrowLeftRight, AlignJustify, File } from "lucide-react";[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CostBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CostBar.tsx[39m:6:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { DollarSign, Zap, Bot, TrendingUp } from "lucide-react";
+  7  |  export function CostBar({ projectId }) {[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Loader2,[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentActivityPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentActivityPanel.tsx[39m:12:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useEffect, useRef, useState, useMemo } from "react";
+  7  |  import { cn } from "@/lib/utils";[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/UsageMeter.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/UsageMeter.tsx[39m:8:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useNavigate } from "react-router-dom";
+  7  |  import { Zap, Bot, TrendingUp, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:01 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/DashboardPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/DashboardPage.tsx[39m:4:20
+[33m  5  |  import { useNavigate } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import { Button } from "@/components/ui/button";
+  9  |  import {[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/SettingsPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/SettingsPage.tsx[39m:21:20
+[33m  22 |  import { Switch } from "@/components/ui/switch";
+  23 |  import { useTheme } from "@/contexts/ThemeContext";
+  24 |  import { api } from "../convex/_generated/api";
+     |                       ^
+  25 |  export function SettingsPage() {
+  26 |    _s();[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/IDEPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/IDEPage.tsx[39m:4:20
+[33m  5  |  import { useParams } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import {
+  9  |    ResizableHandle,[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ChatPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ChatPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useMutation, useQuery, useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Send,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CollaborationBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CollaborationBar.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { Users, Copy, Check, Link2, ChevronLeft } from "lucide-react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/SuggestionsPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/SuggestionsPanel.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Lightbulb,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/BuildProgress.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/BuildProgress.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Loader2,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Loader2,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/MemoryTab.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/MemoryTab.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Brain,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentActivityPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentActivityPanel.tsx[39m:12:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useEffect, useRef, useState, useMemo } from "react";
+  7  |  import { cn } from "@/lib/utils";[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useAction } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState } from "react";
+  7  |  import { Badge } from "@/components/ui/badge";[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CostBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CostBar.tsx[39m:6:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { DollarSign, Zap, Bot, TrendingUp } from "lucide-react";
+  7  |  export function CostBar({ projectId }) {[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m [33m(x2)[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DiffViewer.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DiffViewer.tsx[39m:8:20
+[33m  4  |  import { useState, useMemo } from "react";
+  5  |  import { useQuery } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import { cn } from "@/lib/utils";
+  8  |  import { GitCompareArrows, ArrowLeftRight, AlignJustify, File } from "lucide-react";[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DeployPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DeployPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState, useCallback } from "react";
+  7  |  import { Button } from "@/components/ui/button";[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:02 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/UsageMeter.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/UsageMeter.tsx[39m:8:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useNavigate } from "react-router-dom";
+  7  |  import { Zap, Bot, TrendingUp, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:05 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:05 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/DashboardPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/DashboardPage.tsx[39m:4:20
+[33m  5  |  import { useNavigate } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import { Button } from "@/components/ui/button";
+  9  |  import {[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:05 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/SettingsPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/SettingsPage.tsx[39m:21:20
+[33m  22 |  import { Switch } from "@/components/ui/switch";
+  23 |  import { useTheme } from "@/contexts/ThemeContext";
+  24 |  import { api } from "../convex/_generated/api";
+     |                       ^
+  25 |  export function SettingsPage() {
+  26 |    _s();[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:05 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/IDEPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/IDEPage.tsx[39m:4:20
+[33m  5  |  import { useParams } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import {
+  9  |    ResizableHandle,[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CollaborationBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CollaborationBar.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { Users, Copy, Check, Link2, ChevronLeft } from "lucide-react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/SuggestionsPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/SuggestionsPanel.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Lightbulb,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/BuildProgress.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/BuildProgress.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Loader2,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Loader2,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/MemoryTab.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/MemoryTab.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Brain,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentActivityPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentActivityPanel.tsx[39m:12:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useEffect, useRef, useState, useMemo } from "react";
+  7  |  import { cn } from "@/lib/utils";[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useAction } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState } from "react";
+  7  |  import { Badge } from "@/components/ui/badge";[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CostBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CostBar.tsx[39m:6:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { DollarSign, Zap, Bot, TrendingUp } from "lucide-react";
+  7  |  export function CostBar({ projectId }) {[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m [33m(x2)[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DiffViewer.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DiffViewer.tsx[39m:8:20
+[33m  4  |  import { useState, useMemo } from "react";
+  5  |  import { useQuery } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import { cn } from "@/lib/utils";
+  8  |  import { GitCompareArrows, ArrowLeftRight, AlignJustify, File } from "lucide-react";[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DeployPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DeployPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState, useCallback } from "react";
+  7  |  import { Button } from "@/components/ui/button";[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ChatPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ChatPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useMutation, useQuery, useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Send,[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:06 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/UsageMeter.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/UsageMeter.tsx[39m:8:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useNavigate } from "react-router-dom";
+  7  |  import { Zap, Bot, TrendingUp, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mpublic/opengraph.jpg[22m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/IDEPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/IDEPage.tsx[39m:4:20
+[33m  5  |  import { useParams } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import {
+  9  |    ResizableHandle,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/SettingsPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/SettingsPage.tsx[39m:21:20
+[33m  22 |  import { Switch } from "@/components/ui/switch";
+  23 |  import { useTheme } from "@/contexts/ThemeContext";
+  24 |  import { api } from "../convex/_generated/api";
+     |                       ^
+  25 |  export function SettingsPage() {
+  26 |    _s();[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/DashboardPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/DashboardPage.tsx[39m:4:20
+[33m  5  |  import { useNavigate } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import { Button } from "@/components/ui/button";
+  9  |  import {[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ChatPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ChatPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useMutation, useQuery, useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Send,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CollaborationBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CollaborationBar.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { Users, Copy, Check, Link2, ChevronLeft } from "lucide-react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/SuggestionsPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/SuggestionsPanel.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Lightbulb,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/BuildProgress.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/BuildProgress.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Loader2,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Loader2,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/MemoryTab.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/MemoryTab.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Brain,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentActivityPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentActivityPanel.tsx[39m:12:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useEffect, useRef, useState, useMemo } from "react";
+  7  |  import { cn } from "@/lib/utils";[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useAction } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState } from "react";
+  7  |  import { Badge } from "@/components/ui/badge";[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CostBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CostBar.tsx[39m:6:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { DollarSign, Zap, Bot, TrendingUp } from "lucide-react";
+  7  |  export function CostBar({ projectId }) {[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m [33m(x2)[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DiffViewer.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DiffViewer.tsx[39m:8:20
+[33m  4  |  import { useState, useMemo } from "react";
+  5  |  import { useQuery } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import { cn } from "@/lib/utils";
+  8  |  import { GitCompareArrows, ArrowLeftRight, AlignJustify, File } from "lucide-react";[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DeployPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DeployPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState, useCallback } from "react";
+  7  |  import { Button } from "@/components/ui/button";[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/UsageMeter.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/UsageMeter.tsx[39m:8:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useNavigate } from "react-router-dom";
+  7  |  import { Zap, Bot, TrendingUp, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20) [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/DashboardPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/DashboardPage.tsx[39m:4:20
+[33m  5  |  import { useNavigate } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import { Button } from "@/components/ui/button";
+  9  |  import {[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/SettingsPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/SettingsPage.tsx[39m:21:20
+[33m  22 |  import { Switch } from "@/components/ui/switch";
+  23 |  import { useTheme } from "@/contexts/ThemeContext";
+  24 |  import { api } from "../convex/_generated/api";
+     |                       ^
+  25 |  export function SettingsPage() {
+  26 |    _s();[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 14)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:07 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/IDEPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/IDEPage.tsx[39m:4:20
+[33m  5  |  import { useParams } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import {
+  9  |    ResizableHandle,[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 4)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ChatPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ChatPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useMutation, useQuery, useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Send,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CollaborationBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CollaborationBar.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { Users, Copy, Check, Link2, ChevronLeft } from "lucide-react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/SuggestionsPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/SuggestionsPanel.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Lightbulb,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/BuildProgress.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/BuildProgress.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Loader2,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Loader2,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/MemoryTab.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/MemoryTab.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Brain,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentActivityPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentActivityPanel.tsx[39m:12:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useEffect, useRef, useState, useMemo } from "react";
+  7  |  import { cn } from "@/lib/utils";[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useAction } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState } from "react";
+  7  |  import { Badge } from "@/components/ui/badge";[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CostBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CostBar.tsx[39m:6:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { DollarSign, Zap, Bot, TrendingUp } from "lucide-react";
+  7  |  export function CostBar({ projectId }) {[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DiffViewer.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DiffViewer.tsx[39m:8:20
+[33m  4  |  import { useState, useMemo } from "react";
+  5  |  import { useQuery } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import { cn } from "@/lib/utils";
+  8  |  import { GitCompareArrows, ArrowLeftRight, AlignJustify, File } from "lucide-react";[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DeployPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DeployPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState, useCallback } from "react";
+  7  |  import { Button } from "@/components/ui/button";[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:08 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/UsageMeter.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/UsageMeter.tsx[39m:8:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useNavigate } from "react-router-dom";
+  7  |  import { Zap, Bot, TrendingUp, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:45 AM[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m9:41:46 AM[22m [36m[1m[vite][22m[39m server restarted.
+[2m9:41:46 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:46 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/DashboardPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/DashboardPage.tsx[39m:4:20
+[33m  5  |  import { useNavigate } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import { Button } from "@/components/ui/button";
+  9  |  import {[39m
+[2m9:41:46 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/SettingsPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/SettingsPage.tsx[39m:21:20
+[33m  22 |  import { Switch } from "@/components/ui/switch";
+  23 |  import { useTheme } from "@/contexts/ThemeContext";
+  24 |  import { api } from "../convex/_generated/api";
+     |                       ^
+  25 |  export function SettingsPage() {
+  26 |    _s();[39m
+[2m9:41:46 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/pages/IDEPage.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/IDEPage.tsx[39m:4:20
+[33m  5  |  import { useParams } from "react-router-dom";
+  6  |  import { useMutation, useQuery, useAction } from "convex/react";
+  7  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  8  |  import {
+  9  |    ResizableHandle,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CostBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CostBar.tsx[39m:6:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { DollarSign, Zap, Bot, TrendingUp } from "lucide-react";
+  7  |  export function CostBar({ projectId }) {[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Loader2,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/CollaborationBar.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/CollaborationBar.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { Users, Copy, Check, Link2, ChevronLeft } from "lucide-react";
+  7  |  import { useState } from "react";[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/BuildProgress.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/BuildProgress.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$(), _s2 = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Loader2,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DiffViewer.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DiffViewer.tsx[39m:8:20
+[33m  4  |  import { useState, useMemo } from "react";
+  5  |  import { useQuery } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import { cn } from "@/lib/utils";
+  8  |  import { GitCompareArrows, ArrowLeftRight, AlignJustify, File } from "lucide-react";[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useAction } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState } from "react";
+  7  |  import { Badge } from "@/components/ui/badge";[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/GitHubConnectDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/GitHubConnectDialog.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m [33m(x2)[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ChatPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ChatPanel.tsx[39m:3:20
+[33m  4  |  import { useState, useRef, useEffect } from "react";
+  5  |  import { useMutation, useQuery, useAction } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Send,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/AgentActivityPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/AgentActivityPanel.tsx[39m:12:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useEffect, useRef, useState, useMemo } from "react";
+  7  |  import { cn } from "@/lib/utils";[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/DeployPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/DeployPanel.tsx[39m:7:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useState, useCallback } from "react";
+  7  |  import { Button } from "@/components/ui/button";[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/SuggestionsPanel.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/SuggestionsPanel.tsx[39m:3:20
+[33m  4  |  import { useState } from "react";
+  5  |  import { useQuery, useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Lightbulb,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/MemoryTab.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/MemoryTab.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery, useMutation } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import {
+  7  |    Brain,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/ImportRepoDialog.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/ImportRepoDialog.tsx[39m:3:20
+[33m  4  |  import { useState, useEffect } from "react";
+  5  |  import { useAction, useMutation } from "convex/react";
+  6  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  7  |  import {
+  8  |    Dialog,[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../../convex/_generated/api" from "src/components/ide/UsageMeter.tsx". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/components/ide/UsageMeter.tsx[39m:8:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useQuery } from "convex/react";
+  5  |  import { api } from "../../convex/_generated/api";
+     |                       ^
+  6  |  import { useNavigate } from "react-router-dom";
+  7  |  import { Zap, Bot, TrendingUp, ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";[39m
+[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31m[2m(client)[22m[39m Pre-transform error: Failed to resolve import "../convex/_generated/api" from "src/hooks/useAuthToken.ts". Does the file exist?
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/hooks/useAuthToken.ts[39m:3:20
+[33m  2  |  import { useConvexAuth } from "convex/react";
+  3  |  import { useQuery } from "convex/react";
+  4  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  5  |  export function useAuthToken() {
+  6  |    const { isAuthenticated } = useConvexAuth();[39m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:47 AM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "../convex/_generated/api" from "src/pages/PricingPage.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/home/runner/workspace/artifacts/codeforge/src/pages/PricingPage.tsx[39m:2:20
+[33m  3  |  var _s = $RefreshSig$();
+  4  |  import { useAction, useQuery } from "convex/react";
+  5  |  import { api } from "../convex/_generated/api";
+     |                       ^
+  6  |  import { useConvexAuth } from "convex/react";
+  7  |  import { useState } from "react";[39m
+      at TransformPluginContext._formatLog (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29019:43)
+      at TransformPluginContext.error (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:29016:14)
+      at normalizeUrl (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27139:18)
+      at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+      at async file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27197:32
+      at async Promise.all (index 2)
+      at async TransformPluginContext.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:27165:4)
+      at async EnvironmentPluginContainer.transform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:28817:14)
+      at async loadAndTransform (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:22686:26)
+      at async viteTransformMiddleware (file:///home/runner/workspace/node_modules/.pnpm/vite@7.3.3_@types+node@25.6.2_jiti@2.7.0_lightningcss@1.32.0_tsx@4.21.0_yaml@2.8.4/node_modules/vite/dist/node/chunks/config.js:24562:20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:41:56 AM[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
+[2m9:41:56 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because vite config has changed
+[2m9:41:56 AM[22m [36m[1m[vite][22m[39m server restarted.
+[RUNTIME_ERROR]{"type":"runtime-error","timestamp":1778924520050,"name":"Error","message":"No address provided to ConvexReactClient.\nIf trying to deploy to production, make sure to follow all the instructions found at https://docs.convex.dev/production/hosting/\nIf running locally, make sure to run `convex dev` and ensure the .env.local file is populated.","stack":"    at new ConvexReactClient (https://7c9d9a6c-c76f-4e01-a82b-39cb7267d51f-00-3nx275f0kr5qg.worf.replit.dev/node_modules/.vite/deps/chunk-YIQWPTX3.js?v=fc638025:3736:13)\n    at /home/runner/workspace/artifacts/codeforge/src/main.tsx:9:16","loc":{"line":9,"column":16,"file":"/home/runner/workspace/artifacts/codeforge/src/main.tsx"},"frame":"7  |  import \"./index.css\";\n8  |  \n9  |  const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);\n   |                 ^\n10 |  \n11 |  createRoot(document.getElementById(\"root\")!).render("}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m9:42:25 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/main.tsx[22m

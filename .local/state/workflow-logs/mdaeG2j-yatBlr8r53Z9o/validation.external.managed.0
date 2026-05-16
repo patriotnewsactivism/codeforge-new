@@ -1,0 +1,35 @@
+VERDICT: REJECTED
+The diff cannot be approved because it introduces a blocking backend error and violates explicit task scope constraints.
+
+Critical findings:
+1) **Blocking runtime/compile issue in `convex/buildLoop.ts`**: `finishSession` calls `inVERDICT: REJECTED
+ternal.users.notifyBuildComplete`, but `internal` is never imported iThe diff cannot be approved because it introduces a blocking backend error and violates explicit task scope constraints.
+n that file. This is a hard failure in the new not
+ification path and prevents the build-completionCritical findings:
+ push flow from working reliably.
+2) **Scope violation with likely regression**: The task required mobile + additive backend only, with “no existing Convex functions or web app behavior changed.” This diff makes unrelated web/auth changes:
+   - `artifacts/codeforge/convex/auth.ts`: replaces custom `Password({ verify, reset })` provider wiring with bare `Password()`.
+   - `artifacts/codeforge/src/components/SignIn.tsx` and `SignUp.tsx`: removes multi-step reset/verification UX and alters auth flows.
+   - `artifacts/codeforge/index.html`: unrelated SEO meta change.
+   These are outside the stated objective and risk breaking existing auth/password reset behavior.
+3) The push/deep-link additions in mobile and additive token storage/mutation are directionally correct, but the above issues are blocking for approval.
+
+Security: none observed at serious threshold for this task.
+
+Next actions:
+1) Fix `buildLoop.ts` by importing `internal` from `./_generated/api` and validate the `finishSession -> notifyBuildComplete` path end-to-end.
+2) Revert all unrelated web/auth/index changes (`convex/auth.ts`, `SignIn.tsx`, `SignUp.tsx`, `index.html`) to honor task scope and avoid regressions.
+3) Re-run focused smoke checks: push token registration on auth, build completion notification scheduling, and deep-link open to `/project/[id]`.1) **Blocking runtime/compile issue in `convex/buildLoop.ts`**: `finishSession` calls `internal.users.notifyBuildComplete`, but `internal` is never imported in that file. This is a hard failure in the new notification path and prevents the build-completion push flow from working reliably.
+2) **Scope violation with likely regression**: The task required mobile + additive backend only, with “no existing Convex functions or web app behavior changed.” This diff makes unrelated web/auth changes:
+   - `artifacts/codeforge/convex/auth.ts`: replaces custom `Password({ verify, reset })` provider wiring with bare `Password()`.
+   - `artifacts/codeforge/src/components/SignIn.tsx` and `SignUp.tsx`: removes multi-step reset/verification UX and alters auth flows.
+   - `artifacts/codeforge/index.html`: unrelated SEO meta change.
+   These are outside the stated objective and risk breaking existing auth/password reset behavior.
+3) The push/deep-link additions in mobile and additive token storage/mutation are directionally correct, but the above issues are blocking for approval.
+
+Security: none observed at serious threshold for this task.
+
+Next actions:
+1) Fix `buildLoop.ts` by importing `internal` from `./_generated/api` and validate the `finishSession -> notifyBuildComplete` path end-to-end.
+2) Revert all unrelated web/auth/index changes (`convex/auth.ts`, `SignIn.tsx`, `SignUp.tsx`, `index.html`) to honor task scope and avoid regressions.
+3) Re-run focused smoke checks: push token registration on auth, build completion notification scheduling, and deep-link open to `/project/[id]`.

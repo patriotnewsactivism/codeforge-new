@@ -1,0 +1,6 @@
+{
+  "FrontendCadet": { "quota": 2 },
+  "BackendCadet": { "quota": 2 },
+  "TestsCadet": { "quota": 2 },
+  "HybridCadet": { "quota": 1 }
+}

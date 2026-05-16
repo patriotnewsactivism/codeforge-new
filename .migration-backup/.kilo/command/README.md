@@ -1,0 +1,1 @@
+This folder contains the orchestration and agent runner. The governance module controls growth, quotas, and human-in-the-loop gates.

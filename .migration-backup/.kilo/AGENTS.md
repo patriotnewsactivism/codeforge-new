@@ -1,0 +1,1 @@
+Real Docker-based workers wired into orchestrator. Namespaces: frontend, backend, tests. Each task runs containerized cadet, writes artifacts to knowledgeBase.json, templates periodically updated; root orchestrator delegates to workers/manager. CI flow updated to build frontend via workspace.

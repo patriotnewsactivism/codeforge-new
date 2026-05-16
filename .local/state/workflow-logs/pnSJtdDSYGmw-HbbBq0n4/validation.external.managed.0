@@ -1,0 +1,33 @@
+VERDICT: APPROVED_WITH_COMMENTS
+The diff delivers the core task outcomes: Expo notifications are wired in the mobile app, push permissions/token registration are implemented and tied to an authenticated user via a new additive Convex mutation, build completioVERDICT: APPROVED_WITH_COMMENTS
+n now schedules a server-side push send, and deep links of the form `codeforge-mobile://project/<id>` are handled to route into the project screen.
+
+Critical findings / analysis:
+- ✅ Backend support is additive and aligned with scope: new `userPushTokens` table, `users.registerPushToken` mutation, internal token query, and internal action to send Expo pushes.
+- ✅ Build completion hook is correctly attached in `buildLoop.finishSession` and only triggers for `completed` status.
+- ✅ Mobile app config includes notification plugin + dependency; root layout requests permission and registers Expo token after auth.
+- ✅ Deep link parsing and navigation are implemented for both initial URL and runtime URL events.
+- ⚠️ The local “build complete while screen open” notification logic in `app/project/[id].tsx` likely never fires as intended: it watches `buildLoop.getActiveSession`, which returns only `running` sessions and then `null` once completed, so a `running -> completed` transition is not observable via that query.
+- ⚠️ New `router.push(... as any)` casts were introduced in deep-link handling. This is non-blocking but should be tightened to typed route-safe navigation to avoid masking routing/type issues.
+
+Security: none observed (no serious authz/injection/secret handling regressions in this diff).
+
+Next actions:
+1) Fix the in-screen completion detection (e.g., query latest session status rather than only active-running session, or remove this local notification path if server push is the intended sole mechanism).
+2) Replace new `as any` route casts with typed-safe route construction.
+3) Optionally harden Expo token registration by explicitly supplying `projectId` to `getExpoPushTokenAsync` to reduce environment-specific failures.The diff delivers the core task outcomes: Expo notifications are wired in the mobile app, push permissions/token registration are implemented and tied to an authenticated user via a new additive Convex mutation, build completion now schedules a server-side push send, and deep links of the form `codeforge-mobile://project/<id>` are handled to route into the project screen.
+
+Critical findings / analysis:
+- ✅ Backend support is additive and aligned with scope: new `userPushTokens` table, `users.registerPushToken` mutation, internal token query, and internal action to send Expo pushes.
+- ✅ Build completion hook is correctly attached in `buildLoop.finishSession` and only triggers for `completed` status.
+- ✅ Mobile app config includes notification plugin + dependency; root layout requests permission and registers Expo token after auth.
+- ✅ Deep link parsing and navigation are implemented for both initial URL and runtime URL events.
+- ⚠️ The local “build complete while screen open” notification logic in `app/project/[id].tsx` likely never fires as intended: it watches `buildLoop.getActiveSession`, which returns only `running` sessions and then `null` once completed, so a `running -> completed` transition is not observable via that query.
+- ⚠️ New `router.push(... as any)` casts were introduced in deep-link handling. This is non-blocking but should be tightened to typed route-safe navigation to avoid masking routing/type issues.
+
+Security: none observed (no serious authz/injection/secret handling regressions in this diff).
+
+Next actions:
+1) Fix the in-screen completion detection (e.g., query latest session status rather than only active-running session, or remove this local notification path if server push is the intended sole mechanism).
+2) Replace new `as any` route casts with typed-safe route construction.
+3) Optionally harden Expo token registration by explicitly supplying `projectId` to `getExpoPushTokenAsync` to reduce environment-specific failures.

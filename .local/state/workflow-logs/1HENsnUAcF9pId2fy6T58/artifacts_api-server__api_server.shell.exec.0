@@ -1,0 +1,6 @@
+
+> @workspace/api-server@0.0.0 dev /home/runner/workspace/artifacts/api-server
+> export NODE_ENV=development && pnpm run build && pnpm run start
+
+[41m[30m ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL [39m[49m [31m@workspace/api-server@0.0.0 dev: `export NODE_ENV=development && pnpm run build && pnpm run start`[39m
+[31mCommand failed with signal "SIGTERM"[39m

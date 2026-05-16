@@ -1,0 +1,27 @@
+VERDICT: REJECTED
+The diff does not fully satisfy the task’s core behavior: push notifications are not actually wired to backend build completion events, and the new notification action introduces a serious authorization gap.
+
+Critical findings:
+1) **Push completion trigger is implemented in the mobile screen, not backend build completion flow**. `notifyBuildComplete` is called from `app/project/[id].tsx` when `activeSession.status` transitions to `completed` in that client view. If the app is bacVERDICT: REJECTED
+kgrounded, closed, or the user is not on that project screen, no trigger occurs. This misses The diff does not fully satisfy the task’s core behavior: push notifications are not actually wired to backend build completion events, and the new notification action introduces a serious authorization gap.
+the requirement to notify users when long-running builds c
+omplete (server-side re-engagement path).
+2) *Critical findings:
+*Broken access control in `users.notifyBuildComplete`**. The action acc1) **Push completion trigger is implemented in the mobile screen, not backend build completion flow**. `notifyBuildComplete` is called from `app/project/[id].tsx` when `activeSession.status` transitions to `completed` in that client view. If the app is backgrounded, closed, or the user is not on that project screen, no trigger occurs. This misses the requirement to notify users when long-running builds complete (server-side re-engagement path).
+epts arbitrary `userId` from client args and sends pushes to that user’s tokens without verifying caller identity/ownership. This permits cross-user push spam if IDs are known/obtainable. This is a blocking security issue.
+3) **Deep-link handling is incomplete/inconsistent in `_layout.tsx`**. The code adds a notification response listener that routes by `projectId`, but no actual `Linking` listener/initial URL handling is implemented despite importing `expo-linking`. Route support via Expo Router + scheme may handle many cases, but the explicit deep-link handler requested in the task is not concretely implemented here.
+
+Security: **serious issue observed** — authorization bypass potential in `users.notifyBuildComplete` (client-controlled target `userId` without authz check).
+
+Next actions:
+1) Move push dispatch trigger to backend build lifecycle (e.g., where build session status is set to `completed`) and call an internal notification function there.
+2) Lock down notification sending: derive target user from authenticated context/server-side project ownership, or make the sender internal-only (no public client action with arbitrary `userId`).
+3) Implement explicit deep-link intake in root layout (initial URL + URL event listener) and route `codeforge-mobile://project/:id` deterministically to `/project/[id]`.2) **Broken access control in `users.notifyBuildComplete`**. The action accepts arbitrary `userId` from client args and sends pushes to that user’s tokens without verifying caller identity/ownership. This permits cross-user push spam if IDs are known/obtainable. This is a blocking security issue.
+3) **Deep-link handling is incomplete/inconsistent in `_layout.tsx`**. The code adds a notification response listener that routes by `projectId`, but no actual `Linking` listener/initial URL handling is implemented despite importing `expo-linking`. Route support via Expo Router + scheme may handle many cases, but the explicit deep-link handler requested in the task is not concretely implemented here.
+
+Security: **serious issue observed** — authorization bypass potential in `users.notifyBuildComplete` (client-controlled target `userId` without authz check).
+
+Next actions:
+1) Move push dispatch trigger to backend build lifecycle (e.g., where build session status is set to `completed`) and call an internal notification function there.
+2) Lock down notification sending: derive target user from authenticated context/server-side project ownership, or make the sender internal-only (no public client action with arbitrary `userId`).
+3) Implement explicit deep-link intake in root layout (initial URL + URL event listener) and route `codeforge-mobile://project/:id` deterministically to `/project/[id]`.

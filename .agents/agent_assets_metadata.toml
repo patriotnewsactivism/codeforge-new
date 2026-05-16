@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "0mb-H-WcsZ-s-nJvaiVFd"
+uri = "file://artifacts/codeforge-mobile/assets/images/icon.png"
+type = "image"
+title = "codeforge mobile icon"
